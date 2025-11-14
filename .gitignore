@@ -1,0 +1,39 @@
+
+# Xcode
+.DS_Store
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+*.xcassets/
+build/
+DerivedData/
+*.app
+*.ipa
+*.dSYM.zip
+*.o
+*.lo
+*.la
+*.so
+*.dylib
+*.a
+*.pbxuser
+*.memgraph
+*.xccheckout
+*.xcscmblueprint
+*.xctestplan
+*.swiftpm/
+!*.swiftpm/xcode/package.xcworkspace/
+!*.swiftpm/xcode/project.xcworkspace/
+
+# Swift Package Manager
+.build/
+
+# SwiftData
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+
+# Other
+.swift-version
+.tool-versions
+.env
+.DS_Store

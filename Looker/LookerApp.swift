@@ -12,7 +12,13 @@ import SwiftData
 struct LookerApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            Job.self,
+            JobNote.self,
+            JobTask.self,
+            JobLink.self,
+            JobDocument.self,
+            User.self,
+            Txn.self
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
