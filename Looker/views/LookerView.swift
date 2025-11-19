@@ -69,10 +69,12 @@ struct JobRow: View {
                 Text(job.company).font(.subheadline).foregroundStyle(.secondary)
             }
             Spacer()
-            Text(job.status.rawValue.capitalized)
+            Text(job.status.displayName)
                 .font(.caption)
-                .padding(6)
-                .background(.thinMaterial, in: .capsule)
+                .padding(.horizontal, 8)
+                .padding(.vertical, 4)
+                .foregroundStyle(job.status.accentColor)
+                .background(job.status.color, in: Capsule())
         }
     }
 }
@@ -86,6 +88,7 @@ struct AddJobView: View {
     @State private var linkString = ""
     @State private var status: JobStatus = .applied
     @State private var location = ""
+    @State private var salary: String? = nil
 
     var body: some View {
         NavigationStack {
@@ -95,11 +98,11 @@ struct AddJobView: View {
                     TextField("Company", text: $company)
                     Picker("Status", selection: $status) {
                         ForEach(JobStatus.allCases, id: \.self) { s in
-                            Text(s.rawValue.capitalized).tag(s)
+                            Text(s.displayName).tag(s)
                         }
                     }
-                    TextField("Location (optional)", text: $location)
-                    TextField("Apply Link (optional)", text: $linkString)
+                    TextField("Location", text: $location)
+                    TextField("Listing Link", text: $linkString)
                 }
             }
             .navigationTitle("New Job")
@@ -111,7 +114,13 @@ struct AddJobView: View {
     }
 
     private func add() {
-        let job = Job(title: title, company: company, status: status, location: location.isEmpty ? nil : location)
+        let job = Job(
+            title: title,
+            company: company,
+            status: status,
+            location: location.isEmpty ? nil : location,
+            salaryRange: salary
+        )
         context.insert(job)
         try? context.save()
         dismiss()
@@ -160,7 +169,9 @@ private struct OverviewSection: View {
                 TextField("Title", text: Binding(get: { job.title }, set: { job.title = $0 }))
                 TextField("Company", text: Binding(get: { job.company }, set: { job.company = $0 }))
                 Picker("Status", selection: Binding(get: { job.status }, set: { job.status = $0 })) {
-                    ForEach(JobStatus.allCases, id: \.self) { s in Text(s.rawValue.capitalized).tag(s) }
+                    ForEach(JobStatus.allCases, id: \.self) { s in
+                        Text(s.displayName).tag(s)
+                    }
                 }
                 TextField("Location", text: Binding(get: { job.location ?? "" }, set: { job.location = $0.isEmpty ? nil : $0 }))
                 TextField("Salary Range", text: Binding(get: { job.salaryEstimate ?? "" }, set: { job.salaryEstimate = $0.isEmpty ? nil : $0 }))

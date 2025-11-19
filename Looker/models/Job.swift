@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftData
+import SwiftUI
 
 enum JobStatus: String, Codable, CaseIterable {
     case docket
@@ -17,6 +18,56 @@ enum JobStatus: String, Codable, CaseIterable {
     case offer
     case rejected
     case withdrawn
+
+    var color: Color {
+        switch self {
+        case .docket:
+            return Color.gray
+        case .research:
+            return Color.indigo
+        case .applied:
+            return Color.blue
+        case .contacted:
+            return Color.teal
+        case .interviewing:
+            return Color.orange
+        case .offer:
+            return Color.green
+        case .rejected:
+            return Color.red
+        case .withdrawn:
+            return Color.brown
+        }
+    }
+
+    // An optional contrasting color you might use for text or accents
+    var accentColor: Color {
+        switch self {
+        case .docket, .research:
+            return Color.white
+        case .applied, .contacted, .interviewing:
+            return Color.white
+        case .offer:
+            return Color.white
+        case .rejected:
+            return Color.white
+        case .withdrawn:
+            return Color.white
+        }
+    }
+    
+    var displayName: String {
+        switch self {
+        case .docket: return "Docket"
+        case .research: return "Research"
+        case .applied: return "Applied"
+        case .contacted: return "Contacted"
+        case .interviewing: return "Interviewing"
+        case .offer: return "Offer"
+        case .rejected: return "Rejected"
+        case .withdrawn: return "Withdrawn"
+        }
+    }
 }
 
 @Model
