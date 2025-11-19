@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 @main
-struct LookerApp: App {
+struct SwiftHubApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Job.self,

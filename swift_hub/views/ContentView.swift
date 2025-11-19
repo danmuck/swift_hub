@@ -37,7 +37,7 @@ struct ContentView: View {
             VStack {
                 TabView {
                     Tab("Jobs", systemImage: "tray.and.arrow.down.fill") {
-                        LookerView()
+                        JobsView()
                     }
                     Tab("Docs", systemImage: "person") {
                         ColorDetail(color: .blue, text: "Coming Soon ...")

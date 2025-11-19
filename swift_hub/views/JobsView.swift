@@ -1,7 +1,7 @@
 import SwiftUI
 import SwiftData
 
-struct LookerView: View {
+struct JobsView: View {
     @Environment(\.modelContext) private var context
     @Query(sort: [SortDescriptor(\Job.dateCreated, order: .reverse)]) private var jobs: [Job]
     @State private var showingAdd = false
@@ -367,6 +367,6 @@ private struct DocumentsSection: View {
 }
 
 #Preview {
-    LookerView()
+    JobsView()
         .modelContainer(for: Job.self, inMemory: true)
 }

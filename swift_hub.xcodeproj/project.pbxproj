@@ -12,13 +12,13 @@
 
 /* Begin PBXFileReference section */
 		F686B75A2EC768FF004163A8 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		FA573A092EAC810200B2C13E /* Looker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Looker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA573A092EAC810200B2C13E /* swift_hub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swift_hub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		FA573A0B2EAC810200B2C13E /* Looker */ = {
+		FA573A0B2EAC810200B2C13E /* swift_hub */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Looker;
+			path = swift_hub;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -38,7 +38,7 @@
 			isa = PBXGroup;
 			children = (
 				F686B75A2EC768FF004163A8 /* .gitignore */,
-				FA573A0B2EAC810200B2C13E /* Looker */,
+				FA573A0B2EAC810200B2C13E /* swift_hub */,
 				FA573A0A2EAC810200B2C13E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,7 +46,7 @@
 		FA573A0A2EAC810200B2C13E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FA573A092EAC810200B2C13E /* Looker.app */,
+				FA573A092EAC810200B2C13E /* swift_hub.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,9 +54,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FA573A082EAC810200B2C13E /* Looker */ = {
+		FA573A082EAC810200B2C13E /* swift_hub */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FA573A162EAC810400B2C13E /* Build configuration list for PBXNativeTarget "Looker" */;
+			buildConfigurationList = FA573A162EAC810400B2C13E /* Build configuration list for PBXNativeTarget "swift_hub" */;
 			buildPhases = (
 				FA573A052EAC810200B2C13E /* Sources */,
 				FA573A062EAC810200B2C13E /* Frameworks */,
@@ -67,13 +67,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				FA573A0B2EAC810200B2C13E /* Looker */,
+				FA573A0B2EAC810200B2C13E /* swift_hub */,
 			);
-			name = Looker;
+			name = swift_hub;
 			packageProductDependencies = (
 			);
 			productName = Looker;
-			productReference = FA573A092EAC810200B2C13E /* Looker.app */;
+			productReference = FA573A092EAC810200B2C13E /* swift_hub.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -91,7 +91,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FA573A042EAC810200B2C13E /* Build configuration list for PBXProject "Looker" */;
+			buildConfigurationList = FA573A042EAC810200B2C13E /* Build configuration list for PBXProject "swift_hub" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -105,7 +105,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FA573A082EAC810200B2C13E /* Looker */,
+				FA573A082EAC810200B2C13E /* swift_hub */,
 			);
 		};
 /* End PBXProject section */
@@ -261,6 +261,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -271,13 +273,15 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Swift Hub";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dps.Looker;
+				PRODUCT_BUNDLE_IDENTIFIER = "dps.swift-hub";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -294,6 +298,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -304,13 +310,15 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Swift Hub";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dps.Looker;
+				PRODUCT_BUNDLE_IDENTIFIER = "dps.swift-hub";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -325,7 +333,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FA573A042EAC810200B2C13E /* Build configuration list for PBXProject "Looker" */ = {
+		FA573A042EAC810200B2C13E /* Build configuration list for PBXProject "swift_hub" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA573A142EAC810400B2C13E /* Debug */,
@@ -334,7 +342,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FA573A162EAC810400B2C13E /* Build configuration list for PBXNativeTarget "Looker" */ = {
+		FA573A162EAC810400B2C13E /* Build configuration list for PBXNativeTarget "swift_hub" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA573A172EAC810400B2C13E /* Debug */,
